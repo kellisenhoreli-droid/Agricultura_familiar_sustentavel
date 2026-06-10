@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSustentavel (GitHub Style)</title>
+    <!-- Vinculação do arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="logo">🌱 AgroSustentavelHub</a>
+    </nav>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <main class="main-container">
+        
+        <!-- SIDEBAR (PERFIL DA COOPERATIVA/PRODUTOR) -->
+        <aside class="sidebar">
+            <div class="avatar">👨‍🌾</div>
+            <h1 class="profile-name">Rede Agroecológica</h1>
+            <p class="profile-username">agriculture_familiar_sustentavel</p>
+            <p class="profile-bio">Cultivando alimentos saudáveis, preservando a biodiversidade e fortalecendo comunidades locais através da agroecologia. 🌍✨</p>
+            
+            <button class="btn-follow" id="btnFollow">Follow</button>
+            
+            <div class="profile-meta">
+                <p>📍 Interior do Brasil</p>
+                <p>🔗 <a href="#">linktr.ee/agro_familiar</a></p>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO (REPOSITÓRIOS / PROJETOS DE AGRICULTURA) -->
+        <section>
+            <!-- Abas do GitHub -->
+            <div class="tabs">
+                <div class="tab active">Repositories <span class="counter" id="repoCount">4</span></div>
+                <div class="tab">Projects <span class="counter">0</span></div>
+                <div class="tab">Packages <span class="counter">0</span></div>
+            </div>
+
+            <!-- Filtro de Busca -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" class="search-input" placeholder="Find a project/repository...">
+            </div>
+
+            <!-- Lista de Repositórios -->
+            <div class="repo-list" id="repoList">
+                
+                <!-- Projeto 1 -->
+                <div class="repo-item">
+                    <div>
+                        <a href="#" class="repo-title">sistema-irrigacao-gota</a>
+                        <span class="repo-badge">Public</span>
+                        <p class="repo-desc">Documentação e blueprints de um sistema de irrigação por gotejamento de baixo custo para economia severa de água em hortas familiares.</p>
+                        <div class="repo-meta">
+                            <span><span class="lang-color color-agua"></span>Manejo Hídrico</span>
+                            <span>⭐ <span class="star-count">42</span></span>
+                            <span>Updated 2 days ago</span>
+                        </div>
+                    </div>
+                    <button class="btn-star">⭐ Star</button>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="repo-item">
+                    <div>
+                        <a href="#" class="repo-title">compostagem-termofilica</a>
+                        <span class="repo-badge">Public</span>
+                        <p class="repo-desc">Manual prático para produção de adubo orgânico de alta qualidade em menos de 30 dias utilizando resíduos da própria propriedade rural.</p>
+                        <div class="repo-meta">
+                            <span><span class="lang-color color-organico"></span>Solo Vivo</span>
+                            <span>⭐ <span class="star-count">128</span></span>
+                            <span>Updated 5 days ago</span>
+                        </div>
+                    </div>
+                    <button class="btn-star">⭐ Star</button>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="repo-item">
+                    <div>
+                        <a href="#" class="repo-title">rotacao-culturas-planner</a>
+                        <span class="repo-badge">Public</span>
+                        <p class="repo-desc">Algoritmo e tabela inteligente de planejamento anual para alternância de culturas, prevenindo pragas e enriquecendo o solo naturalmente.</p>
+                        <div class="repo-meta">
+                            <span><span class="lang-color color-tech"></span>Planejamento</span>
+                            <span>⭐ <span class="star-count">89</span></span>
+                            <span>Updated last week</span>
+                        </div>
+                    </div>
+                    <button class="btn-star">⭐ Star</button>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="repo-item">
+                    <div>
+                        <a href="#" class="repo-title">cooperativa-venda-direta</a>
+                        <span class="repo-badge">Public</span>
+                        <p class="repo-desc">Modelo de negócios e logística descentralizada para conectar produtores familiares diretamente aos consumidores urbanos (CSA).</p>
+                        <div class="repo-meta">
+                            <span><span class="lang-color color-organico"></span>Economia Solidária</span>
+                            <span>⭐ <span class="star-count">56</span></span>
+                            <span>Updated 3 weeks ago</span>
+                        </div>
+                    </div>
+                    <button class="btn-star">⭐ Star</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Vinculação do arquivo JS externo -->
+    <script href="script.js" src="script.js"></script>
+</body>
+</html>
