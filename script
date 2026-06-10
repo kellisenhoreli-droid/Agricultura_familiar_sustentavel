@@ -1,0 +1,63 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Seleção de elementos do DOM
+    const btnFollow = document.getElementById('btnFollow');
+    const searchInput = document.getElementById('searchInput');
+    const starButtons = document.querySelectorAll('.btn-star');
+
+    // 1. Ouvinte para o Botão Follow / Unfollow
+    if (btnFollow) {
+        btnFollow.addEventListener('click', () => {
+            if (btnFollow.innerText === "Follow") {
+                btnFollow.innerText = "Unfollow";
+                btnFollow.style.backgroundColor = "#30363d";
+            } else {
+                btnFollow.innerText = "Follow";
+                btnFollow.style.backgroundColor = "var(--btn-bg)";
+            }
+        });
+    }
+
+    // 2. Ouvinte para os Botões de "Star" nos projetos
+    starButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const starCountSpan = button.parentElement.querySelector('.star-count');
+            let currentStars = parseInt(starCountSpan.innerText);
+
+            if (button.innerText.includes("Starred")) {
+                button.innerHTML = "⭐ Star";
+                starCountSpan.innerText = currentStars - 1;
+            } else {
+                button.innerHTML = "⭐ Starred";
+                starCountSpan.innerText = currentStars + 1;
+            }
+        });
+    });
+
+    // 3. Ouvinte para a barra de busca (Filtro em tempo real)
+    if (searchInput) {
+        searchInput.addEventListener('keyup', () => {
+            const query = searchInput.value.toLowerCase();
+            const repoItems = document.getElementsByClassName('repo-item');
+            const repoCount = document.getElementById('repoCount');
+            let visibleCount = 0;
+
+            for (let i = 0; i < repoItems.length; i++) {
+                const title = repoItems[i].querySelector('.repo-title').innerText.toLowerCase();
+                const desc = repoItems[i].querySelector('.repo-desc').innerText.toLowerCase();
+                
+                // Exibe o item se bater com o título ou com a descrição
+                if (title.includes(query) || desc.includes(query)) {
+                    repoItems[i].style.display = "flex";
+                    visibleCount++;
+                } else {
+                    repoItems[i].style.display = "none";
+                }
+            }
+            
+            // Atualiza dinamicamente o número da aba do GitHub
+            if (repoCount) {
+                repoCount.innerText = visibleCount;
+            }
+        });
+    }
+});
